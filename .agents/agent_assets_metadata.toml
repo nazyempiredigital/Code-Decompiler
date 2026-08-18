@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "7Egx2tHdFBkB8j1stJPA7"
+uri = "file://nazyempire-editable-source.zip"
+type = "unspecified"
+title = "Nazy Empire editable source"
+description = "Editable React + TypeScript source reconstruction with the supplied media assets, responsive pages, local form states, and royalty calculator. Generated build output and dependencies are excluded."

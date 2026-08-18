@@ -1,0 +1,1 @@
+- [Compiled archive conversion](compiled-archive-conversion.md) — production-only bundles need a clearly labeled source reconstruction, not a claimed exact decompilation.

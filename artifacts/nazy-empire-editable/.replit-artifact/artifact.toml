@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Nazy Empire Editable"
+description = "An editable source version of the supplied Nazy Empire digital services website, rebuilt from the provided production archive with its branding, content, and media assets preserved."
+version = "1.0.0"
+id = "artifacts/nazy-empire-editable"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18305
+
+[services.development]
+run = "pnpm --filter @workspace/nazy-empire-editable run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nazy-empire-editable", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nazy-empire-editable/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18305"
+BASE_PATH = "/"
